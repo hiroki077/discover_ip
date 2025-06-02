@@ -1,32 +1,31 @@
+Requirements
+Linux (e.g., Ubuntu or other common distributions)
 
----
+Python 3.x
 
-## 必要環境
+pip (Python package manager)
 
-- Linux（Ubuntu などの一般的なディストリビューションを想定）  
-- Python 3.x  
-- pip（Python パッケージ管理ツール）  
+Installing Dependencies
+This script uses only the standard library and does not rely on any external packages. If you need additional libraries in the future, you can add them as required.
 
----
-
-## 依存ライブラリのインストール
-
-今回のスクリプトでは、外部ライブラリは使用せず標準ライブラリのみで実装しています。必要な場合は別途追加してください。
-
-```bash
-# リポジトリをクローン
+bash
+コピーする
+# Clone the repository
 git clone https://github.com/hiroki077/discover_ip.git
 cd <YourRepo>
 
-# 必要があれば仮想環境を作成して有効化
+# (Optional) Create and activate a virtual environment
 python3 -m venv venv
 source venv/bin/activate
 
-# （現状、requirements.txt は不要ですが、将来的にライブラリを追加する場合はここを利用）
+# (At present, requirements.txt is not needed, but if you add packages later, use it)
 pip install -r requirements.txt
-
-
-#run on the terminal
+Run the following in the terminal to edit your crontab:
+bash
+コピーする
 crontab -e
-# 毎日午前5時に Pico 検出スクリプトを実行（ブラウザタブは一度すべて閉じてから開く）
-0 5 * * * /usr/bin/python3 /full/path/to/discover_ip.py >> /full/path/to/discover_ip.log 2>&1
+Then add this line to schedule the Pico discovery script to run every day at 5:00 AM (closing all browser tabs before opening):
+
+pgsql
+コピーする
+0 5 * * * /usr/bin/python3 /full/path/to/discover_ip.py >> /full/path/to/discover_ip.log 2
