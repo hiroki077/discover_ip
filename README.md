@@ -15,7 +15,7 @@
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/hiroki077/discover_pico.git
+git clone https://github.com/hiroki077/discover_ip.git
 cd <YourRepo>
 
 # 必要があれば仮想環境を作成して有効化
@@ -29,4 +29,4 @@ pip install -r requirements.txt
 #run on the terminal
 crontab -e
 # 毎日午前5時に Pico 検出スクリプトを実行（ブラウザタブは一度すべて閉じてから開く）
-0 5 * * * /usr/bin/python3 /full/path/to/discover_pico.py >> /full/path/to/discover_pico.log 2>&1
+0 5 * * * /usr/bin/python3 /full/path/to/discover_ip.py >> /full/path/to/discover_ip.log 2>&1
